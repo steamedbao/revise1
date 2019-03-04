@@ -1,0 +1,86 @@
+Temperature:
+
+#include <stdio.h>
+int main()
+{
+    float fahrenheit, celsius;
+
+    printf("Enter the temperature in degree F: \n");
+    scanf("%f", &fahrenheit);
+
+    celsius = (fahrenheit - 32)*5/9;
+
+
+    printf("Converted degree in C: %.2f\n", celsius);
+    return 0;
+
+}
+
+----------------------------------------------------------------------------------------
+Power:
+
+#include <stdio.h>
+int main()
+{    /* Write your program code here */
+    float current, resistance, powerloss;
+    printf("Enter the current:\n"); //need printf if not instruction won't print
+    scanf("%f", &current); //no %.2f for scanf, just %f
+    printf("Enter the resistance:");
+    scanf("%f", &resistance);
+
+    powerloss = current*current*resistance;
+
+    printf("The power loss: %.2f\n", powerloss); // %.2f for printf
+
+    return 0;
+
+}
+
+-----------------------------------------------------------------------------------------
+Cylinder:
+
+#include <stdio.h>
+#define PI 3.1416
+int main()
+{    /* Write your program code here */
+    float surfacearea,volume,radius,height;
+    printf("Enter the radius:\n");
+    scanf("%f", &radius);
+    printf("Enter the height:\n");
+    scanf("%f", &height);
+
+    volume = PI*radius*radius*height;
+    surfacearea = 2*PI*radius*height + 2*PI*radius*radius;
+
+    printf("The volume is: %.2f\n", volume);
+    printf("The surface area is: %.2f\n", surfacearea);
+
+
+    return 0;
+    }
+------------------------------------------------------------------------------------------
+Speed:
+
+#include <stdio.h>
+int main()
+{    /* Write your program code here */
+    float distance, time, speed;
+
+    printf("Enter distance (in km):\n");
+    scanf("%f",&distance);
+    printf("Enter time (in sec):\n");
+    scanf("%f",&time);
+
+    speed = distance/time;
+
+    printf("The speed is %.2f km/sec\n", speed);
+
+    return 0;
+    }
+    
+-------------------------------------------------------------------------------------------
+Distance:
+
+
+
+-------------------------------------------------------------------------------------------
