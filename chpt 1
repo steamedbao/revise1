@@ -105,8 +105,61 @@ int main()
 -------------------------------------------------------------------------------------------
 Linear system
 
+#include <stdio.h>
+#include <math.h>
+int main()
+{    /* Write your program code here */
+
+    int a1, b1, c1, a2, b2, c2;
+    float x,y;
+
+    printf("Enter the values for a1, b1, c1, a2, b2, c2:\n");
+    scanf("%d %d %d %d %d %d", &a1,&b1,&c1,&a2,&b2,&c2);
+
+    x = (b2*c1-b1*c2)/(a1*b2-a2*b1);
+    y = (a1*c2-a2*c1)/(a1*b2-a2*b1);
+
+    printf("x = %.2f and y = %.2f\n", x,y);
+
+    return 0;
+    }
 
 
 -------------------------------------------------------------------------------------------
+Control flow
+
+#include <stdio.h>
+int main()
+{
+    int hours;
+    float tax, grossPay, netPay;
+    printf("Enter hours of work: \n");
+    scanf("%d", &hours);
+
+   /* Write your program code here */
+   if (hours>40)
+        grossPay = (hours-40)*6*1.5 + 40*6;
+   else
+        grossPay = hours*6;
+
+    if (grossPay>1500)
+        tax = (grossPay-1500)*0.3 + 1000*0.1 + 500*0.2;
+    else if (grossPay>1000)
+        tax = (grossPay-1000)*0.2+1000*0.1;
+    else
+        tax = grossPay*0.1;
+
+    netPay = grossPay - tax;
+
+   printf("Gross pay = %.2f\n", grossPay);
+   printf("Tax = %.2f\n", tax);
+   printf("Net pay = %.2f\n", netPay);
+   return 0;
+   }
+
+-------------------------------------------------------------------------------------------
+Compute salary grade
 
 
+
+-------------------------------------------------------------------------------------------
