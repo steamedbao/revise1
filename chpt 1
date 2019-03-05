@@ -249,3 +249,51 @@ break;
 
 
 -------------------------------------------------------------------------------------------
+Count chars
+
+#include <stdio.h>
+int main()
+{
+    int ccount = 0, dcount = 0, i = 0 ;
+    char ch[100];
+    printf("Enter your characters (# to end): \n");
+
+   /* Write your program code here */
+   gets(ch);
+   for (i=0;ch[i]!='#';i++)
+        if (isalpha(ch[i]))
+            ccount++;
+        else if (isdigit(ch[i]))
+            dcount++;
+
+
+   printf("The number of digits: %d\n", dcount);
+   printf("The number of letters: %d\n", ccount);
+   return 0;
+
+}
+
+-------------------------------------------------------------------------------------------
+compute series
+
+#include <stdio.h>
+int main()
+{
+    int n, denominator = 1;
+    float x, result = 1.0, numerator = 1.0;
+
+   printf("Enter x: \n");
+   scanf("%f", &x);
+
+    for (n = 1; n <=10; ++n )
+        numerator *=x;
+        denominator *= n;
+        result += numerator/denominator;
+
+
+   printf("Result = %.2f\n",  result);
+   return 0;
+}
+
+
+-------------------------------------------------------------------------------------------
